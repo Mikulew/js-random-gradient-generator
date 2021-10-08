@@ -1,0 +1,139 @@
+:root {
+  --yangColor: #d8c21e;
+  --yinColor: #111111;
+  --borderRadius: 10px;
+  --animation: .3s ease;
+}
+
+html {
+  font-size: 2vmin;
+  font-family: 'Gemunu Libre', sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--yangColor) 0 10%,
+    var(--yinColor) 75% 100%
+  );
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 3px solid var(--yangColor);
+  border-radius: var(--borderRadius);
+  width: 50vw;
+  min-height: 80vmin;
+  padding: 20px;
+  background-color: var(--yinColor);
+  box-shadow: 10px -5px 30px var(--yangColor);
+}
+
+#output-color {
+  width: 100%;
+  height: 35vmin;
+  border: 1px solid var(--yangColor);
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--yangColor);
+}
+
+#output-code {
+  color: var(--yinColor);
+  background-color: var(--yangColor);
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  border: none;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.button {
+  font-size: 20px;
+  padding: 15px 25px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  transition: var(--animation);
+}
+
+#generate {
+  background-color: var(--yangColor);
+  color: var(--yinColor);
+  border: 3px solid var(--yinColor);
+}
+
+#generate:hover {
+  color: var(--yangColor);
+  background-color: var(--yinColor);
+  border: 3px solid var(--yangColor);
+}
+
+#copy {
+  color: var(--yangColor);
+  background-color: var(--yinColor);
+  border: 3px solid var(--yangColor);
+}
+
+#copy:hover {
+  background-color: var(--yangColor);
+  color: var(--yinColor);
+  border: 3px solid var(--yinColor);
+}
+
+.toast {
+  position: fixed;
+  font-size: 20px;
+  padding: 20px;
+  top: 10px;
+  right: 10px;
+  color: var(--yangColor);
+  background: var(--yinColor);
+  transition: var(--animation);
+  transform: translateX(calc( 100% + 10px ));
+  border: 3px solid var(--yangColor);
+  border-radius: var(--borderRadius);
+}
+
+@keyframes showColor {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+  .button {
+    margin: 5px 0;
+  }
+}
