@@ -31,8 +31,7 @@ function generateGradient() {
 };
 
 function copyCode() {
-  outputCode.select();
-  document.execCommand("copy");
+  navigator.clipboard.writeText(outputCode.value);
   toast.style.transform = "translateX(0)";
   setTimeout(() => toast.style.transform = "translateX( calc(100% + 10px) )", 2000);
 }

@@ -27,3 +27,4 @@
 - [CSS Gradients and repeating gradients](https://www.youtube.com/watch?v=4kWHW7da4U8)
 - [Fun ways to animate CSS gradients](https://www.youtube.com/watch?v=f3mwKLXpOLk)
 - [#29 CSS Gradients - CSS Full Tutorial](https://www.youtube.com/watch?v=TYHFe4L9bfo)
+- [MDN: Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
