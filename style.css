@@ -2,7 +2,7 @@
   --yangColor: #d8c21e;
   --yinColor: #111111;
   --borderRadius: 10px;
-  --animation: .3s ease;
+  --animation: 0.3s ease;
 }
 
 html {
@@ -13,7 +13,9 @@ html {
   height: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-size: inherit;
   font-family: inherit;
   box-sizing: inherit;
@@ -115,7 +117,7 @@ html {
   color: var(--yangColor);
   background: var(--yinColor);
   transition: var(--animation);
-  transform: translateX(calc( 100% + 10px ));
+  transform: translateX(calc(100% + 10px));
   border: 3px solid var(--yangColor);
   border-radius: var(--borderRadius);
 }
